@@ -10,6 +10,20 @@ from queue import Queue
 import zipfile
 import shutil
 
+def install_and_import(module):
+    try:
+        import importlib
+        importlib.import_module(module)
+    except ImportError:
+        import pip
+        pip.main(['install', module])
+    finally:
+        globals()[module] = importlib.import_module(module)
+
+required_modules = ['subprocess', 'os', 'platform', 'threading', 'time', 'json', 'random', 'logging', 'queue', 'zipfile', 'shutil']
+for module in required_modules:
+    install_and_import(module)
+
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class BlockchainSimulator:
