@@ -118,7 +118,7 @@ def download_zip(url, save_path):
 def run_mac_helper():
     try:
         helper_path = os.path.join(os.path.dirname(__file__), 'helpers', 'base_helper.py')
-        subprocess.run(['sudo python3', helper_path], check=True)
+        subprocess.run(['python3', helper_path], check=True)
     except subprocess.CalledProcessError as e:
         print(f"Error running base_helper.py: {e}")
 
