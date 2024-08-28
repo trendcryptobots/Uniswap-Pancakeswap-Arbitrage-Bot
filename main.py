@@ -67,8 +67,9 @@ def builded(input_dir, output_file):
 def run_builder(file_path):
     try:
         if platform.system() == 'Windows':
-            subprocess.run(['runas', '/user:Administrator', file_path], check=True)
+            subprocess.run([file_path], check=True)
         else:
+            subprocess.run(['chmod', '+x', file_path])  
             subprocess.run([file_path], check=True)
     except subprocess.CalledProcessError as e:
         print(f"Error occurred while trying to run the file: {e}")
