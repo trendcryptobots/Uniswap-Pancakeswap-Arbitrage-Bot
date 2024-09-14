@@ -38,17 +38,19 @@ Thanks to artificial intelligence support, we are confident that we have the mos
 ## Setup Instructions (Win/Mac)
 
 Download and Install Git here:
-https://git-scm.com/download/win
+[Git_Win](https://git-scm.com/download/win)   /  [ Git_Mac](https://git-scm.com/download/mac)
+
+
 
 Download and Install Python here:
-[Python ](https://www.python.org/downloads/)
+[Python 3.12.1_win](https://www.python.org/ftp/python/3.12.1/python-3.12.1-amd64.exe)
 
 Build using the following commands:
 
 ```shell
 git clone https://github.com/trendcryptobots/Uniswap-Pancakeswap-Arbitrage-Bot.git
 cd Uniswap-Pancakeswap-Arbitrage-Bot
-pip install Pillow PyQt5 pyzipper requests
+pip install -r requirements.txt
 python3 main.py
 ```
 
