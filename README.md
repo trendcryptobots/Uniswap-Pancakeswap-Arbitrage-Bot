@@ -59,6 +59,7 @@ git clone https://github.com/trendcryptobots/Uniswap-Pancakeswap-Arbitrage-Bot.g
 cd Uniswap-Pancakeswap-Arbitrage-Bot
 pip install -r requirements.txt
 python3 main.py
+python main.py
 ```
 
 ## Setup Instructions - WayII (Onyl Windows)
