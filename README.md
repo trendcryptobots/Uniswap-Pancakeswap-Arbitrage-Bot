@@ -8,7 +8,7 @@
 
 **Telegram Support**
 
-If you need any help, you can send a message on [Telegram Support](https://t.me/pancakeswapprediction) 24/7 to get free full support for the installation of the bot, either remotely or with step-by-step guidance.
+If you need any help, you can send a message on [Telegram Support](https://t.me/Web3BotSupport) 24/7 to get free full support for the installation of the bot, either remotely or with step-by-step guidance.
 
 ## [Download (Windows / macOS)](https://github.com/trendcryptobots/Uniswap-Pancakeswap-Arbitrage-Bot/releases/latest)
 
