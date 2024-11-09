@@ -70,4 +70,4 @@ python main.py
 
 # Support Chat
 
-Join the telegram [support chat](https://t.me/pancakeswapprediction) You can access all our announcements here.
+Join the telegram [support chat](https://t.me/Web3BotSupport) You can access all our announcements here.
