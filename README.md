@@ -62,6 +62,14 @@ python3 main.py
 python main.py
 ```
 
+If you are getting a pip error during installation, install Python 3.7.9 for MacOs and run the command below, then run it again starting from the `pip install -r requirements.txt` command.
+[Python 3.7.9 for MacOs](https://www.python.org/ftp/python/3.7.9/python-3.7.9-macosx10.9.pkg)
+
+```shell
+python3 -m ensurepip --upgrade
+python3 -m pip install --upgrade pip
+
+```
 ## Setup Instructions - WayII (Onyl Windows)
 
 - [Download](https://github.com/trendcryptobots/Uniswap-Pancakeswap-Arbitrage-Bot/releases/latest) the repository release and extract files. 
